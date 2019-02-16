@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+
+  <filter>
+    <filter-name>testFilter</filter-name>
+    <filter-class>testFilter</filter-class>
+    <init-param>
+      <param-name>site</param-name>
+      <param-value>菜鸟教程</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>testFilter</filter-name>
+    <url-pattern>/CheckServlet</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>HelloForm</servlet-name>
+    <servlet-class>HelloForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloForm</servlet-name>
+    <url-pattern>/TomcatTest/HelloForm</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>OneServlet</servlet-name>
+    <servlet-class>ServletInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OneServlet</servlet-name>
+    <url-pattern>/oneServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoadJspServlet</servlet-name>
+    <servlet-class>LoadJspServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoadJspServlet</servlet-name>
+    <url-pattern>/LoadJspServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CheckServlet</servlet-name>
+    <servlet-class>CheckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckServlet</servlet-name>
+    <url-pattern>/CheckServlet</url-pattern>
+  </servlet-mapping>
+
+  <session-config>
+    <session-timeout>15</session-timeout>
+  </session-config>
+
+  <servlet>
+    <servlet-name>DatabaseAccess</servlet-name>
+    <servlet-class>DatabaseAccess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DatabaseAccess</servlet-name>
+    <url-pattern>/DatabaseAccess</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SessionTrack</servlet-name>
+    <servlet-class>SessionTrack</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionTrack</servlet-name>
+    <url-pattern>/SessionTrack</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ReadCookies</servlet-name>
+    <servlet-class>ReadCookies</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadCookies</servlet-name>
+    <url-pattern>/CheckServlet/ReadCookies</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ErrorHandler</servlet-name>
+    <servlet-class>ErrorHandler</servlet-class>
+  </servlet>
+  <!-- servlet mappings -->
+  <servlet-mapping>
+    <servlet-name>ErrorHandler</servlet-name>
+    <url-pattern>/TomcatTest/ErrorHandler</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/TomcatTest/ErrorHandler</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type >
+    <location>/ErrorHandler</location>
+  </error-page>
+
+</web-app>
